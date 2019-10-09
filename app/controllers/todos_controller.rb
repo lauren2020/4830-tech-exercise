@@ -7,6 +7,17 @@ class TodosController < ApplicationController
     @todos = Todo.all
   end
 
+  def fuzzy_search(search_string)
+    Todo.basic_search(task: search_string)
+  end
+
+  def search
+    @todos = fuzzy_search(params[:search_string])
+    if @todos.empty?
+     @todos = [] #Todo.all.order :task
+    end
+  end
+
   # GET /todos/1
   # GET /todos/1.json
   def show
