@@ -83,5 +83,5 @@ production:
   database: todo_prod
   username: admin
   password: admin_prod_password
-  host: ec2-3-15-183-111.us-east-2.compute.amazonaws.com
+  host: ec2-18-223-187-203.us-east-2.compute.amazonaws.com
   port: 5432
